@@ -1,0 +1,390 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-06-07T01:11:45.951Z",
+  "__export_source": "insomnia.desktop.app:v9.2.0",
+  "resources": [
+    {
+      "_id": "req_599a4d4e28664687b55391b966892858",
+      "parentId": "fld_4349a1f0c9a947aba13f2738a76591b0",
+      "modified": 1717722142535,
+      "created": 1717551614066,
+      "url": "http://localhost:8080/login",
+      "name": "1-Login Usuario",
+      "description": "password DB: $2a$10$r5Ee10JpdqPg0TPB1vkPzeDLhaKZ9rZLo.ypqoW7syazraMDAvkGe",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"login\" : \"bruno.ellerbach\",\n    \"clave\" : \"123456\"\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [
+        {
+          "id": "pair_2cc32a8cd78444dbaaa0665de964abc3",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1717721982816,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": false,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_4349a1f0c9a947aba13f2738a76591b0",
+      "parentId": "wrk_cf6b6cc0eb9e418baae940009e2ceed0",
+      "modified": 1717551614063,
+      "created": 1717551614063,
+      "name": "Voll Med",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1717551612268,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_cf6b6cc0eb9e418baae940009e2ceed0",
+      "parentId": null,
+      "modified": 1717551614061,
+      "created": 1717551614061,
+      "name": "Voll Med",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_2227d460acdc4459bbf4c69fc0658f52",
+      "parentId": "fld_f9434350a5504af4aa87327e6f575963",
+      "modified": 1717722085153,
+      "created": 1717721933002,
+      "url": "http://localhost:8080/pacientes",
+      "name": "Registrar Paciente",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"nombre\" : \"Juan Fernandez\",\n    \"email\" : \"juan@voll.pac\",\n    \"telefono\": \"45678945\",\n    \"documento\" : \"789456321\",\n    \"direccion\":{\n        \"calle\":\"calle 5\",\n        \"distrito\": \"distrito 2\",\n        \"ciudad\": \"San Luis\",\n        \"numero\": \"1\",\n        \"complemento\": \"a\"\n    }\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc3MzU2MzZ9.puw5l5XWeD9bBrHOknTWjhwtuqUybF4tYIlG0nl-LT0"
+      },
+      "metaSortKey": -1717721988921,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f9434350a5504af4aa87327e6f575963",
+      "parentId": "fld_4349a1f0c9a947aba13f2738a76591b0",
+      "modified": 1717722645165,
+      "created": 1717721982716,
+      "name": "Paciente",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": {},
+      "metaSortKey": -1717721982716,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_eba88a43807f466d9951f9620033e812",
+      "parentId": "fld_f9434350a5504af4aa87327e6f575963",
+      "modified": 1717721991183,
+      "created": 1717721222222,
+      "url": "http://localhost:8080/pacientes",
+      "name": "Listar Pacientes Activos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "disabled": false,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc3MzU2MzZ9.puw5l5XWeD9bBrHOknTWjhwtuqUybF4tYIlG0nl-LT0",
+        "prefix": ""
+      },
+      "metaSortKey": -1717721988821,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8c46b0c6bd1543c196ab488718221926",
+      "parentId": "fld_f9434350a5504af4aa87327e6f575963",
+      "modified": 1717722303959,
+      "created": 1717722160930,
+      "url": "http://localhost:8080/pacientes",
+      "name": "Actualizar Paciente",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"id\" : 1,\n\t\"nombre\" : \"Joel\",\n  \"telefono\": \"123145\",\n  \"direccion\":{\n      \"calle\":\"calle 7\",\n      \"distrito\": \"distrito 0\",\n      \"ciudad\": \"Cordoba\",\n      \"numero\": \"2\",\n      \"complemento\": \"b\"\n  }\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc3MzU2MzZ9.puw5l5XWeD9bBrHOknTWjhwtuqUybF4tYIlG0nl-LT0"
+      },
+      "metaSortKey": -1717721988721,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8c196f9a3aed455a93e691bc8ce9332c",
+      "parentId": "fld_f9434350a5504af4aa87327e6f575963",
+      "modified": 1717722354296,
+      "created": 1717722326635,
+      "url": "http://localhost:8080/pacientes/2",
+      "name": "Delete Paciente",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc3MzU2MzZ9.puw5l5XWeD9bBrHOknTWjhwtuqUybF4tYIlG0nl-LT0"
+      },
+      "metaSortKey": -1717721988621,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_247d7b89e5ce4ff4ae95f364a4009c16",
+      "parentId": "fld_c9519a8ee152409fb92e4bd32df08185",
+      "modified": 1717721996897,
+      "created": 1717551614065,
+      "url": "http://localhost:8080/medicos",
+      "name": "Registrar Médico",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"nombre\" : \"Genesys Rondon\",\r\n    \"email\" : \"Genesysrondon@voll.med\",\r\n    \"telefone\": \"12345678\",\r\n    \"documento\" : \"234567\",\r\n    \"especialidad\": \"ORTOPEDIA\",\r\n    \"direccion\":{\r\n        \"calle\":\"calle 5\",\r\n        \"distrito\": \"distrito 2\",\r\n        \"ciudad\": \"Caracas\",\r\n        \"numero\": \"1\",\r\n        \"complemento\": \"a\"\r\n    }\r\n}"
+      },
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc1Njc3ODd9.dhxfEwdgc_gakvr08B9KPARPJnHeHmrwEOXgxK2Ixl8"
+      },
+      "metaSortKey": -1717721959922,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c9519a8ee152409fb92e4bd32df08185",
+      "parentId": "fld_4349a1f0c9a947aba13f2738a76591b0",
+      "modified": 1717721951297,
+      "created": 1717721951297,
+      "name": "Medico",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1717721951297,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_167fe1d0029b4573a03e787e7c54ef28",
+      "parentId": "fld_c9519a8ee152409fb92e4bd32df08185",
+      "modified": 1717722003030,
+      "created": 1717551614068,
+      "url": "http://localhost:8080/medicos",
+      "name": "Listado Médicos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "disabled": false,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc1Njc3ODd9.dhxfEwdgc_gakvr08B9KPARPJnHeHmrwEOXgxK2Ixl8",
+        "prefix": ""
+      },
+      "metaSortKey": -1717721959797,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dc1148117bdf48e88701d369833beb77",
+      "parentId": "fld_c9519a8ee152409fb92e4bd32df08185",
+      "modified": 1717721974228,
+      "created": 1717551614072,
+      "url": "http://localhost:8080/medicos/4",
+      "name": "Muestra un único médico",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVuby5lbGxlcmJhY2giLCJpc3MiOiJ2b2xsIG1lZCIsImlkIjoxLCJleHAiOjE3MTc1Njc3ODd9.dhxfEwdgc_gakvr08B9KPARPJnHeHmrwEOXgxK2Ixl8"
+      },
+      "metaSortKey": -1717721959672,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f57c7f07634e4d7091c1abe125863ef0",
+      "parentId": "fld_c9519a8ee152409fb92e4bd32df08185",
+      "modified": 1717722001201,
+      "created": 1717551614070,
+      "url": "http://localhost:8080/medicos",
+      "name": "Actualizar Médicos",
+      "description": "",
+      "method": "PUT",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1717721959572,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1b20348a644f4ed9bcd06d367027f22d",
+      "parentId": "fld_c9519a8ee152409fb92e4bd32df08185",
+      "modified": 1717721998768,
+      "created": 1717551614071,
+      "url": "http://localhost:8080/medicos/1",
+      "name": "Delete Médico",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "preRequestScript": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1717721959522,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_16ef1058025f070f030f25aa9f481e6eab478311",
+      "parentId": "wrk_cf6b6cc0eb9e418baae940009e2ceed0",
+      "modified": 1717551616109,
+      "created": 1717551616109,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1717551616110,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_16ef1058025f070f030f25aa9f481e6eab478311",
+      "parentId": "wrk_cf6b6cc0eb9e418baae940009e2ceed0",
+      "modified": 1717551616113,
+      "created": 1717551616113,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
